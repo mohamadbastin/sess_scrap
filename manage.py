@@ -28,14 +28,30 @@ if len(sys.argv) > 0:
 					break
 			if flag: 
 				res.append(c[i])
+		print(len(res))
+		print(res)
+
 	if sys.argv[1].lower() == 'stu':
 		name = [sys.argv[2], sys.argv[3]]
 		for i in data.keys():
 			if name in data[i]["students"]:
 				res.append(data[i]["title"])
 
-	print(len(res))
-	print(res)
+		print(len(res))
+		print(res)
+
+	if sys.argv[1].lower() == 'all':
+		for _ in data.values():
+			print(_["title"])
+			print(_['time_room'])
+			print(_['group'])
+			print(_['teacher'])
+			print(_['gender'])
+			print(_['vahed'])
+			print(_['unit'])
+			print(_['final_date'])
+			print(_['students'])
+			print("*****************************")		
 
 else:
 	print("nothing to do :)")
